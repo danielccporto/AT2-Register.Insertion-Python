@@ -12,10 +12,10 @@ cadastro = 0
 #Entrada para usuário
 Primeiro = input("Digite seu nome ou se quiser encerrar o programa digite (terminou): ")
 
-#Primeira condição para condicionar o programa
+#Primeira condição para start do programa
 if Primeiro.strip() != "terminou": 
 
-  #Aceitando a condição, o programa da sequencia para coletar os dados do usuário.
+  #Coleta de dados do usuário.
   sobren = str(input("Digite seu sobrenome: "))
   CP = input("Digite seu CPF: ")
   data = str(input("Digite sua data de nascimento: "))
@@ -25,7 +25,7 @@ if Primeiro.strip() != "terminou":
 #print(f"cadastro 1 : {cadastro}")
 i = 0
 
-#Entrada de loop para executar ação caso o ID já exista:
+#loop caso o ID já exista:
 while Primeiro.strip() != "terminou": 
   
   if cadastro in ID: 
@@ -35,7 +35,7 @@ while Primeiro.strip() != "terminou":
     cpfs.insert(int(cadastro), CP)
     nascimento.insert(int(cadastro), data)
     
-#Segunda condição caso o ID seja inexistente
+#Caso o ID seja inexistente
   else:
     Primeiro_nome.append(Primeiro)
     sobrenome.append(sobren)
@@ -44,7 +44,7 @@ while Primeiro.strip() != "terminou":
     ID.append(cadastro)
    
 
-#Fim do loop, enquanto a condição não for satisfeita novos registros acontecem. 
+#Condição não satisfeita, novos registros acontecem. 
   Primeiro = input("Digite seu nome: ")
   
   if Primeiro.strip() != "terminou":
